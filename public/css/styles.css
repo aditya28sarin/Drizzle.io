@@ -1,0 +1,518 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
+body{
+
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #777;/*
+	padding: 30px*/
+}
+
+.header{
+	height: 100vh;
+	background-image: linear-gradient(to right bottom,
+	 rgba(161,196,253,0.8),
+	 rgba(194,233,251,0.8)),
+	url(../imgs/weather1.jpg);
+	background-size: cover;
+	background-position: top;
+	/*clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);*/
+	position: relative;
+}
+
+.logo-box{
+	position: absolute;
+
+	top: 40px;
+	left: 40px;
+}
+
+.logo{
+height: 35px;
+}
+
+
+.text-box{
+	position: absolute;
+	top: 46%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.heading-primary{
+	color: #fff;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	margin-bottom: 60px;
+}
+
+.heading-primary-main{
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+	animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary-subtitle{
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
+	animation-name: moveInRight;
+	animation-duration: 1s;
+}
+
+/*'moveInLeft' is the name of the animation*/
+@keyframes moveInLeft{
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	80%{
+		transform: translateX(10px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight{
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	80%{
+		transform: translateX(-20px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+
+@keyframes moveInButton{
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes inPage{
+	0% {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+
+
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+hr{
+
+    margin-top: 40px;
+    border-top: 100px solid green;
+}
+
+.btn:link,
+.btn:visited{
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.2s;
+position: relative;
+}
+
+.btn:hover{
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0,0,0,.6);
+}
+
+.btn:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,.6);	
+}
+
+.btn-white{
+	background-color: white;
+	color: #777;
+}
+
+.btn::after{
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	transition: all 0.4s;	
+}
+
+.btn-white::after{
+	background-color: white;
+
+}
+
+.btn:hover::after{
+	transform: scaleX(1.4) scaleY(1.6);	
+	opacity: 0;
+}
+
+.btn-animation{
+	animation: moveInButton 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
+}
+
+
+.header-weather{
+	height: 100vh;
+	background-image: linear-gradient(to right bottom,
+	 rgba(161,196,253,0.4),
+	 rgba(194,233,251,0.4)),
+	url(../imgs/weather1.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+}
+
+
+.btn-goback{
+
+text-transform: uppercase;
+
+padding: 10px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.2s;
+position: relative;
+background-color: black;
+color: #777;
+margin-right: 40px;
+border-color: black;
+}
+
+
+.btn-goback:hover{
+text-decoration: none;
+}
+
+
+.btn-g:link,
+.btn-g:visited{
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.2s;
+position: relative;
+}
+
+.btn-g:hover{
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0,0,0,.6);
+}
+
+.header-weather-1{
+	height: 100vh;
+	background-image: linear-gradient(to right bottom,
+	 rgba(161,196,253,0.4),
+	 rgba(194,233,251,0.4)),
+	url(../imgs/weather1.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	animation: inPage 1s;
+}
+
+.text-box-weather{
+	position: absolute;
+	top: 43%;
+	left:47%;
+	transform: translate(-40%,-40%);
+	text-align: center;
+}
+
+.label-weather{
+	display: block;
+	font-size:40px;
+	font-weight: 400;
+	letter-spacing: 25px;
+	animation: moveInLeft 1s ease-out;
+	font-family: "Roboto";
+}
+
+.input-weather{
+	display: block;
+	font-size: 30px;
+	font-family: "Dancing Script";
+	animation-name: moveInRight;
+	animation-duration: 1s;
+	border-radius: 100px;
+	background-color: transparent;
+	margin: 20px;
+	margin-left: 50px;
+}
+
+
+.input-weather[type="text"]::placeholder{
+	text-align: center;
+}
+
+.form-weather{
+	/*color: #fff;*/
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	margin-bottom: 60px;
+}
+
+.btn-weather{
+	text-transform: uppercase;
+	background-color: black;
+	color: #777;
+	padding: 5px 40px;
+	border-radius: 100px;
+	margin-right: 40px;
+	border-color: black;
+}
+
+.btn-weather:hover{
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0,0,0,.6);
+}
+
+
+.city-name{
+	/*text-transform: uppercase;
+	*/backface-visibility: hidden;	
+	font-size: 100px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
+	font-family: "Italianno";
+}
+
+.city-desc{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 0px;
+}
+
+
+.temp-box{
+	position: absolute;
+	top: 75%;
+	left:10%;
+	transform: translate(-25%,-30%);
+	text-align: center;
+}
+
+.city-temp{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+.speed-box{
+	position: absolute;
+	top: 15%;
+	left:12%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}
+
+.fa-wind{
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+.city-wind-title{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+.city-wind{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 15px;
+}
+
+.fa-temperature-low{
+	font-size: 25px;
+	margin-right: 10px;
+}
+
+.cloud-box{
+	position: absolute;
+	top: 45%;
+	left:10%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}
+
+.fa-cloud-sun{
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.city-cloud-title{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+
+.city-cloud{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 15px;
+}
+
+
+
+.humidity-box{
+	position: absolute;
+	top: 15%;
+	left:75%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}
+
+.fa-cloud-showers-heavy{
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+.city-humidity-title{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+.city-humidity{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 15px;
+}
+
+.fa-location-arrow{
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+
+.type-box{
+	position: absolute;
+	top: 45%;
+	left:73%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}
+
+.city-type-title{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+.city-type{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 15px;
+}
+
+.fa-biohazard{
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+
+.pre-box{
+	position: absolute;
+	top: 77%;
+	left:75%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}
+
+.city-pre-title{
+	display: inline;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 1000;
+	letter-spacing: 15px;
+}
+
+.city-pre{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 15px;
+}
+
+
+.fa-meteor{
+	font-size: 35px;
+	margin-right: 10px;
+}
+
+.btn-goback-box{
+	position: absolute;
+	top: 65%;
+	left:47%;
+	transform: translate(-20%,-40%);
+	text-align: center;
+}

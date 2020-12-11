@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<%- include('partials/header') %>
+
+
+<header class="header-weather">
+    <div class="text-box-weather">
+		 <form class="form-weather" action="/weather" method="post">
+		        <label for="cityLabel" class="label-weather">City Name</label>
+		        <input class="input-weather" type="text" name="cityName" placeholder="Search for something?" autocomplete="off">
+		        <button type="submit" class=" btn-weather btn-animation">Submit</button>
+	    </form>
+    </div>
+</header>   
+ 
+   
+<%- include('partials/footer') %>
